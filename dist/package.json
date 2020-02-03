@@ -1,0 +1,65 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^6.0.5"
+  },
+  "build": {
+    "appId": "cn.smile-yan.my-redis-desktop-manager",
+    "productName": "MyRedisDesktopManager",
+    "artifactName": "${productName}.${version}.${ext}",
+    "copyright": "Copyright © 2019 myredis.cn",
+    "asar": true,
+    "directories": {
+      "output": "build-apps",
+      "buildResources": "./"
+    },
+    "electronVersion": "4.1.0",
+    "files": [
+      "!static/js/*.map",
+      "!static/css/*.map"
+    ],
+    "win": {
+      "icon": "icons/myredis.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "menuCategory": true,
+      "allowElevation": false
+    },
+    "linux": {
+      "icon": "icons/",
+      "category": "Utility",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "mac": {
+      "icon": "icons/myredis.ico",
+      "type": "development",
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg"
+      ]
+    }
+  }
+}
